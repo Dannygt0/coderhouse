@@ -1,0 +1,35 @@
+/* Variables para mantener consistencia (CSS Avanzado) */
+:root {
+    --primary-color: #0d6efd;
+    --dark-color: #212529;
+    --spacing-lg: 80px;
+}
+
+/* BOX MODEL: Aplicando rellenos y márgenes estratégicos */
+.hero-section {
+    min-height: 80vh;
+    padding: var(--spacing-lg) 0; /* Padding superior/inferior */
+    background-color: #f8f9fa;
+}
+
+/* Flexbox personalizado para los botones */
+.hero-buttons {
+    display: flex;
+    gap: 15px; /* Propiedad moderna de Flexbox para separar elementos */
+    margin-top: 2rem;
+}
+
+/* Transiciones suaves para demostrar CSS Avanzado */
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Ajuste de imagen (Box Model) */
+.hero-section img {
+    border: 8px solid white; /* Border */
+    outline: 1px solid #ddd;  /* Outline */
+}
