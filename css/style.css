@@ -33,3 +33,47 @@
     border: 8px solid white; /* Border */
     outline: 1px solid #ddd;  /* Outline */
 }
+
+/* CSS GRID: Definimos columnas dinámicas */
+.grid-precios {
+    display: grid;
+    /* Crea 3 columnas iguales en desktop, pero se adapta al contenido */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 50px;
+}
+
+/* BOX MODEL & ESTILO DE CARDS */
+.precio-card {
+    background: #fff;
+    border-radius: 15px; /* Border-radius avanzado */
+    transition: transform 0.3s ease; /* Propiedad avanzada */
+    display: flex; /* Flexbox interno para alinear contenido */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.precio-card:hover {
+    transform: translateY(-10px); /* Efecto hover visual */
+}
+
+/* Diferenciando la card destacada usando Box Model */
+.precio-card.destacado {
+    border: 3px solid var(--primary-color);
+    transform: scale(1.05); /* La hace resaltar un poco más */
+}
+
+.precio-card.destacado:hover {
+    transform: scale(1.08) translateY(-10px);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: #6c757d;
+}
