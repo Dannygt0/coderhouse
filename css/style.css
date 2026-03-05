@@ -1,25 +1,22 @@
-/* Variables para mantener consistencia (CSS Avanzado) */
 :root {
-    --primary-color: #0d6efd;
-    --dark-color: #212529;
+    --primary-color: #e63946; 
+    --primary-hover: #c1121f; 
+    --dark-color: #1d3557;     
+    --light-bg: #f1faee;     
     --spacing-lg: 80px;
 }
-
-/* BOX MODEL: Aplicando rellenos y márgenes estratégicos */
 .hero-section {
     min-height: 80vh;
     padding: var(--spacing-lg) 0; /* Padding superior/inferior */
     background-color: #f8f9fa;
 }
 
-/* Flexbox personalizado para los botones */
 .hero-buttons {
     display: flex;
-    gap: 15px; /* Propiedad moderna de Flexbox para separar elementos */
+    gap: 15px; 
     margin-top: 2rem;
 }
 
-/* Transiciones suaves para demostrar CSS Avanzado */
 .nav-link {
     transition: color 0.3s ease-in-out;
 }
@@ -28,22 +25,18 @@
     color: var(--primary-color) !important;
 }
 
-/* Ajuste de imagen (Box Model) */
 .hero-section img {
     border: 8px solid white; /* Border */
     outline: 1px solid #ddd;  /* Outline */
 }
 
-/* CSS GRID: Definimos columnas dinámicas */
 .grid-precios {
     display: grid;
-    /* Crea 3 columnas iguales en desktop, pero se adapta al contenido */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px; /* Espacio entre tarjetas */
     margin-top: 50px;
 }
 
-/* BOX MODEL & ESTILO DE CARDS */
 .precio-card {
     background: #fff;
     border-radius: 15px; /* Border-radius avanzado */
@@ -57,7 +50,6 @@
     transform: translateY(-10px); /* Efecto hover visual */
 }
 
-/* Diferenciando la card destacada usando Box Model */
 .precio-card.destacado {
     border: 3px solid var(--primary-color);
     transform: scale(1.05); /* La hace resaltar un poco más */
@@ -76,4 +68,91 @@
 .price span {
     font-size: 1rem;
     color: #6c757d;
+}
+
+.custom-form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+.custom-input {
+    padding: 12px 15px; 
+    border: 2px solid #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;
+}
+
+.img-featured {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+h1, h2, h3 {
+    color: var(--dark-color);
+}
+
+.hero-section {
+    background-color: #fcfcfc; 
+}
+.precio-card.destacado {
+    border: 3px solid var(--primary-red) !important;
+    background-color: #fff;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.precio-card ul li::before {
+    content: "✓";
+    color: var(--primary-red);
+    margin-right: 8px;
+    font-weight: bold;
+}
+html {
+    scroll-behavior: smooth;
+}
+#precios {
+    scroll-margin-top: 90px; 
+}
+
+.feature-box {
+    background-color: #fff;
+    border-radius: 15px;
+    border-bottom: 4px solid #eee; 
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    border-bottom-color: var(--primary-red); 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+#features {
+    scroll-margin-top: 90px;
 }

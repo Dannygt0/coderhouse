@@ -10,16 +10,18 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-nav">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">MiApp <span class="text-primary">.</span></a>
+        <a class="navbar-brand fw-bold" href="#">RedZone <span class="text-primary">.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto text-center">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
                 <li class="nav-item"><a class="nav-link" href="#features">Funciones</a></li>
                 <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3" href="#">Descargar</a></li>
+<button type="button" class="nav-link btn btn-primary text-white ms-lg-3" data-bs-toggle="modal" data-bs-target="#downloadModal">
+  Descargar Ahora
+</button>
             </ul>
         </div>
     </div>
@@ -28,62 +30,122 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <h1 class="display-3 fw-bold">Gestiona tu tiempo como un profesional.</h1>
-                <p class="lead my-4">La herramienta definitiva para equipos que buscan eficiencia sin complicaciones.</p>
+                <h1 class="display-3 fw-bold">Rompe tus límites <span style="color: var(--primary-red);">hoy</span>.</h1>
+                <p class="lead my-4">La plataforma definitiva para atletas que buscan llevar su entrenamiento al siguiente nivel con datos en tiempo real.</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary btn-lg me-2">Empezar Gratis</button>
-                    <button class="btn btn-outline-dark btn-lg">Saber más</button>
+                    <button class="btn btn-primary btn-lg me-2">Empezar a Entrenar</button>
+                    <a href="#precios" class="btn btn-outline-primary btn-lg">Ver Planes</a>
                 </div>
             </div>
             <div class="col-md-6 mt-5 mt-md-0">
-                <img src="https://via.placeholder.com/600x400" alt="Vista previa de la aplicación en laptop" class="img-fluid rounded shadow-lg">
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&h=400&auto=format&fit=crop" alt="Persona entrenando en el gimnasio" class="img-fluid rounded shadow-lg img-featured">
             </div>
         </div>
     </div>
 </header>
+<section id="features" class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold">Entrena con Inteligencia</h2>
+        <p class="text-muted">Herramientas diseñadas para potenciar cada gota de sudor.</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="feature-box p-4 text-center">
+                <div class="feature-icon mb-3">🔥</div>
+                <h4>Quema Eficiente</h4>
+                <p>Algoritmos avanzados para calcular tu gasto calórico real según tu fisonomía.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box p-4 text-center">
+                <div class="feature-icon mb-3">📊</div>
+                <h4>Progreso Visual</h4>
+                <p>Gráficos detallados de tu evolución semanal, mensual y anual.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box p-4 text-center">
+                <div class="feature-icon mb-3">📱</div>
+                <h4>Sincronización</h4>
+                <p>Conecta tus dispositivos wearables favoritos sin configuraciones complejas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="precios" class="container py-5">
     <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold">Planes para todos</h2>
-        <p class="text-muted">Elige el que mejor se adapte a tu equipo.</p>
+        <h2 class="display-5 fw-bold">Planes de Entrenamiento</h2>
+        <p class="text-muted">Lleva tu rendimiento al siguiente nivel.</p>
     </div>
 
     <div class="grid-precios">
         <div class="precio-card border shadow-sm p-4 text-center">
-            <h3>Básico</h3>
+            <h3>Principiante</h3>
             <p class="price">$0<span>/mes</span></p>
             <ul class="list-unstyled my-4">
-                <li>1 Usuario</li>
-                <li>5 Proyectos</li>
-                <li>Soporte por Email</li>
+                <li>Rutinas básicas</li>
+                <li>Seguimiento de pasos</li>
+                <li>Soporte comunitario</li>
             </ul>
-            <button class="btn btn-outline-primary w-100">Elegir</button>
+            <button class="btn btn-outline-primary w-100">Registrarse</button>
         </div>
 
-        <div class="precio-card destacado border-primary p-4 text-center">
-            <span class="badge bg-primary mb-2">Más popular</span>
-            <h3>Pro</h3>
+        <div class="precio-card destacado p-4 text-center">
+            <span class="badge bg-danger mb-2">Más popular</span>
+            <h3>Atleta Pro</h3>
             <p class="price">$19<span>/mes</span></p>
             <ul class="list-unstyled my-4 fw-bold">
-                <li>10 Usuarios</li>
-                <li>Proyectos Ilimitados</li>
-                <li>Soporte 24/7</li>
+                <li>Entrenador IA 24/7</li>
+                <li>Planes de nutrición</li>
+                <li>Análisis de ritmo cardíaco</li>
             </ul>
-            <button class="btn btn-primary w-100 shadow">Elegir Pro</button>
+            <button class="btn btn-primary w-100 shadow">¡Ir Pro Ahora!</button>
         </div>
 
         <div class="precio-card border shadow-sm p-4 text-center">
-            <h3>Enterprise</h3>
+            <h3>Elite Team</h3>
             <p class="price">$49<span>/mes</span></p>
             <ul class="list-unstyled my-4">
-                <li>Usuarios Ilimitados</li>
-                <li>Seguridad Avanzada</li>
-                <li>Manager dedicado</li>
+                <li>Coach humano dedicado</li>
+                <li>Acceso a eventos VIP</li>
+                <li>Equipamiento incluido</li>
             </ul>
             <button class="btn btn-outline-primary w-100">Contactar</button>
         </div>
     </div>
 </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="main-footer mt-5">
+    <div class="container">
+        <div class="footer-content py-4">
+            <p class="mb-0">&copy; 2026 Proyecto CoderHouse. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#" class="me-3">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100 fw-bold">¡Lleva tu entrenamiento a todos lados!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Próximamente disponible en las mejores tiendas.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <button class="btn btn-dark btn-lg">App Store</button>
+            <button class="btn btn-dark btn-lg">Google Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
